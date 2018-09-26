@@ -8,7 +8,7 @@
     "export": "next export"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nathaniel Hill <nata@goguna.com>",
   "license": "ISC",
   "dependencies": {
     "next": "^7.0.0",
