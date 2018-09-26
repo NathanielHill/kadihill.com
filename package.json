@@ -1,0 +1,21 @@
+{
+  "name": "kadihill",
+  "version": "1.0.0",
+  "description": "KadiHill.com Website",
+  "scripts": {
+    "test": "echo \"no tests specified\"",
+    "build": "next build",
+    "export": "next export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^7.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
