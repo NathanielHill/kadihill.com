@@ -1,4 +1,4 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 const emoji = require('remark-emoji')
 const nextOffline = require('next-offline')
 const path = require('path')
@@ -17,6 +17,7 @@ module.exports = withPlugins(
     webpack: config => {
       config.resolve.modules = [
         path.resolve('./src'),
+        path.resolve('./public'),
         'node_modules'
       ]
       return config
