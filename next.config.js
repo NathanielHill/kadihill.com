@@ -15,6 +15,9 @@ module.exports = withPlugins(
   ],
   {
     webpack: config => {
+      config.resolve.alias = {
+        components: path.resolve(__dirname, 'components')
+      }
       config.resolve.modules = [
         path.resolve('./src'),
         path.resolve('./public'),
