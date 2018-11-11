@@ -1,7 +1,9 @@
 *
+!*/
 !pages
-!src
 !public
+!src
+!static
 !next.config.js
 !yarn.lock
 !package.json
