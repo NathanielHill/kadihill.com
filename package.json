@@ -23,7 +23,7 @@
     "@zeit/next-mdx": "^1.2.0",
     "next": "^7.0.2",
     "next-compose-plugins": "^2.1.1",
-    "next-offline": "^3.0.4",
+    "next-offline": "^3.0.10",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-twemoji": "^0.1.0",
