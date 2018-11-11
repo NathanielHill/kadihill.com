@@ -2,7 +2,7 @@
 !*/
 !pages
 !public
-!src
+!components
 !static
 !next.config.js
 !yarn.lock
