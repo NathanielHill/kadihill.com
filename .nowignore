@@ -8,5 +8,5 @@ www/*
 !www/pages
 !www/static
 !www/next.config.js
-!www/yarn.lock
 !www/package.json
+!www/yarn.lock
