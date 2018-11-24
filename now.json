@@ -2,6 +2,7 @@
   "name": "kadihill",
   "alias": "www.kadihill.com",
   "version": 2,
+  "regions": [ "all" ],
   "builds": [
     { "src": "public/*", "use": "@now/static" },
     { "src": "www/package.json", "use": "@now/static-build" }
