@@ -1,0 +1,43 @@
+<svelte:head>
+	<title>Kadi Hill | {post.metadata.title}</title>
+</svelte:head>
+
+<h1>{post.metadata.title}</h1>
+
+<div class='content'>
+	{@html post.html}
+</div>
+
+<style>
+	h1 {
+		font-weight: 800;
+	}
+	.content :global(h2) {
+		font-size: 1.4em;
+		font-weight: 500;
+	}
+	.content :global(ul) {
+		line-height: 1.5;
+	}
+	.content :global(li) {
+		margin: 0 0 0.5em 2em;
+	}
+	.content :global(p) {
+		margin: 1em 0 0 0;
+		text-indent: 1em;
+	}
+</style>
+<script>
+	export default {
+		async preload({ params, query }) {
+			const res = await this.fetch(`blog/${params.slug}.json`)
+			const data = await res.json()
+
+			if (res.status === 200) {
+				return { post: data }
+			} else {
+				this.error(res.status, data.message)
+			}
+		}
+	}
+</script>
