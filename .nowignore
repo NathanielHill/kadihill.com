@@ -3,6 +3,7 @@
 !*/
 !src
 !static
+!posts
 
 !package.json
 !rollup.config.js
