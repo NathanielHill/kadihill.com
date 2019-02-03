@@ -10,6 +10,6 @@
     "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
     "dest": "/$1"
     },
-    { "src": "^/(.*)", "dest": "/_error.html" }
+    { "src": "^/(.*)", "dest": "/404.html" }
   ]
 }
