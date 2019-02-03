@@ -1,11 +1,21 @@
+<script>
+	export default {
+		data() {
+			return {
+				pages: [ 'about', 'blog', 'contact' ]
+			}
+		}
+	}
+</script>
+
 <nav>
-	<a rel=prefetch href='.' class='kadihill {typeof segment === "undefined" ? "selected" : ""}'>
+	<a rel=prefetch href='.' class='kadihill' class:active='typeof segment === "undefined"'>
 		Kadi Hill
 	</a>
 	<ul>
-		<li><a rel=prefetch class='{segment === "about" ? "selected" : ""}' href='about'>About</a></li>
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
-		<li><a rel=prefetch class='{segment === "contact" ? "selected" : ""}' href='contact'>Contact</a></li>
+		{#each pages as page}
+			<li><a rel=prefetch class:active='segment === page' href={page}>{page}</a></li>
+		{/each}
 	</ul>
 </nav>
 
@@ -42,15 +52,16 @@
 		outline: 0;
 		padding: .1em .2em 0 .2em;
 		text-decoration: none;
+		text-transform: capitalize;
 	}
 	a:not(.kadihill):first-letter {
 		font-size: 1.1em;
 	}
-	a:not(.selected):hover {
+	a:not(.active):hover {
 		display: inline-block;
 		position: relative;
 	}
-	a:not(.selected):hover:after {
+	a:not(.active):hover:after {
 		background-color: rgb(134, 134, 134);
 		bottom: -2px;
 		content: '';
@@ -59,14 +70,14 @@
 		position: absolute;
 		width: 4.35em;
 	}
-	a:not(.kadihill):not(.selected):hover:after {
+	a:not(.kadihill):not(.active):hover:after {
 		width: calc(100% - 0.4em);
 	}
-	.selected {
+	.active {
 		display: inline-block;
 		position: relative;
 	}
-	.selected:after {
+	.active:after {
 		background-color: rgb(160,214,180);
 		bottom: -2px;
 		content: '';
@@ -75,7 +86,7 @@
 		position: absolute;
 		width: 4.35em;
 	}
-	.selected:not(.kadihill):after {
+	.active:not(.kadihill):after {
 		width: calc(100% - 0.4em);
 	}
 </style>
