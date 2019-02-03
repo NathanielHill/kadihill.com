@@ -1,5 +1,5 @@
 <nav>
-	<a rel=prefetch href='.'>Kadi Hill</a>
+	<a rel=prefetch href='.' class='kadihill'>Kadi Hill</a>
 	<ul>
 		<li><a rel=prefetch class='{segment === "about" ? "selected" : ""}' href='about'>About</a></li>
 		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
@@ -41,8 +41,8 @@
 		padding: .1em .5em 0 .5em;
 		text-decoration: none;
 	}
-	a:first-letter {
-		font-weight: 800;
+	a:not(.kadihill):first-letter {
+		font-size: 1.1em;
 	}
 	li > a:not(.selected):hover {
 		display: inline-block;
