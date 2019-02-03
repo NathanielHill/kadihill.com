@@ -4,7 +4,8 @@
 
 <h1>{status}</h1>
 
-<p>{error.message}</p>
+<p>Looks like there's nothing here!</p>
+<p>Why dont you <a rel=prefetch href='/'>start over</a>?</p>
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>
