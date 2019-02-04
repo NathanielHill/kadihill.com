@@ -1,6 +1,6 @@
 ---
 postNumber: 3
-title: Being Born
+title: Giving Birth
 author: Kadi Hill
 pubDate: February 5th, 2019
 description: At 35 weeks pregnant I was sleeping in a camping hammock on a very beautiful, yet very primitive island.
