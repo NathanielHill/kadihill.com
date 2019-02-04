@@ -11,12 +11,20 @@
 			</a>
 		</h1>
 		<p class='date'>{post.pubDate}</p>
-		<p class='description'>{post.description}</p>
+		<p class='description'>
+			{post.description}
+			<a class='keep-reading' href='blog/{post.slug}'>keep reading &#8594;</a>
+		</p>
 	</li>
 	{/each}
 </ul>
 
 <style>
+	.keep-reading {
+		font-size: 0.75em;
+		display: block;
+		text-indent: 0;
+	}
 	ul {
 		margin: 0 0 1em 0;
 		line-height: 1.5;
