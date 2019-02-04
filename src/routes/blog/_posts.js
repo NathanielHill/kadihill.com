@@ -23,5 +23,5 @@ export default function () {
     const html = marked(content.replace(/^\t+/gm,
       match => match.split('\t').join('  ')), { renderer })
     return { html, metadata, slug: file.replace(/^[\d-]+/, '').replace(/\.md$/, '') }
-  }).sort((a, b) => a.metadata.pubdate < b.metadata.pubdate)
+  }).sort((a, b) => a.metadata.pubdate > b.metadata.pubdate)
 }
