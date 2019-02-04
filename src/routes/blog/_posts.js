@@ -17,11 +17,10 @@ export default function () {
     if (path.extname(file) !== '.md') { return null }
     const markdown = fs.readFileSync(`posts/${file}`, 'utf-8')
     const { content, metadata } = processMarkdown(markdown)
-    const date = new Date(`${metadata.pubdate} EDT`) // cheeky hack
-    metadata.dateString = date.toDateString()
+    metadata.slug = file.replace(/\.md$/, '')
     const renderer = new marked.Renderer()
     const html = marked(content.replace(/^\t+/gm,
       match => match.split('\t').join('  ')), { renderer })
-    return { html, metadata, slug: file.replace(/^[\d-]+/, '').replace(/\.md$/, '') }
-  }).sort((a, b) => a.metadata.pubdate > b.metadata.pubdate)
+    return { html, metadata }
+  }).sort((a, b) => a.metadata.postNumber < b.metadata.postNumber)
 }

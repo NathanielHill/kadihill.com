@@ -1,7 +1,7 @@
 import getPosts from './_posts.js'
 
 const lookup = new Map()
-getPosts().forEach(post => { lookup.set(post.slug, JSON.stringify(post)) })
+getPosts().forEach(post => { lookup.set(post.metadata.slug, JSON.stringify(post)) })
 
 export function get (req, res, next) {
   const { slug } = req.params

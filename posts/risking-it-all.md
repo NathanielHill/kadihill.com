@@ -1,7 +1,8 @@
 ---
+postNumber: 2
 title: Risking It All
 author: Kadi Hill
-pubdate:February 4, 2019
+pubDate: February 4, 2019
 description: To truly understand my birth story, my parenting journey, and where my opinions and views come from you have to understand this part of my journey.
 ---
 

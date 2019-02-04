@@ -1,7 +1,8 @@
 ---
+postNumber: 1
 title: Being Born
 author: Kadi Hill
-pubdate: October 14th, 2018
+pubDate: October 14th, 2018
 description: With my first pregnancy, I had this strange experience where I believed I would have this magical, transcendent birth but also that I would die.
 ---
 
