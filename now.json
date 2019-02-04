@@ -6,16 +6,16 @@
   "builds": [ { "src": "package.json", "use": "@now/static-build" } ],
   "routes": [
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/$", "dest": "/index.html" },
+      "src": "^/$", "dest": "/" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/about$", "dest": "/about/index.html" },
+      "src": "^/about$", "dest": "/about" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/blog$", "dest": "/blog/index.html" },
+      "src": "^/blog$", "dest": "/blog" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
       "src": "^/blog/([^/]+)", "dest": "/blog/$1" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/contact$", "dest": "/contact/index.html" },
+      "src": "^/contact$", "dest": "/contact" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/(.*)", "dest": "/404/index.html" }
+      "src": "^/(.*)", "dest": "/404" }
   ]
 }
