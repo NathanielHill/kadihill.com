@@ -8,14 +8,14 @@
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
       "src": "^/$", "dest": "/" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/about$", "dest": "/about" },
+      "src": "^/about$", "dest": "/about/" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/blog$", "dest": "/blog" },
+      "src": "^/blog$", "dest": "/blog/" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
       "src": "^/blog/([^/]+)", "dest": "/blog/$1" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/contact$", "dest": "/contact" },
+      "src": "^/contact$", "dest": "/contact/" },
     { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/(.*)", "dest": "/404" }
+      "src": "^/(.*)", "dest": "/404/" }
   ]
 }
