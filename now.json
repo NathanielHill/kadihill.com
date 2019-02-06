@@ -4,32 +4,9 @@
   "version": 2,
   "regions": [ "all" ],
   "builds": [ { "src": "package.json", "use": "@now/static-build" } ],
-  "routes": [
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/$", "dest": "/" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/about$", "dest": "/about/" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/blog$", "dest": "/blog/" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/blog/([^/]+)", "dest": "/blog/$1" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/client/(.+)", "dest": "/client/$1" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/contact$", "dest": "/contact/" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/blog.json$", "dest": "/blog.json" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/favicon.ico$", "dest": "/favicon.ico" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/favicon.png$", "dest": "/favicon.png" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/manifest.json$", "dest": "/manifest.json" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/robots.txt$", "dest": "/robots.txt" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/service-worker.js$", "dest": "/service-worker.js" },
-    { "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-      "src": "^/(.*)", "dest": "/404/" }
-  ]
+  "routes": [ {
+    "src": "^/(.*)",
+    "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
+    "dest": "/$1"
+    } ]
 }
