@@ -4,9 +4,5 @@
   "version": 2,
   "regions": [ "all" ],
   "builds": [ { "src": "package.json", "use": "@now/static-build" } ],
-  "routes": [ {
-    "src": "^/(.*)",
-    "headers": { "cache-control": "max-age=31536000, s-maxage=31536000" },
-    "dest": "/$1"
-    } ]
+  "routes": [ { "src": "^/(.*)", "dest": "/$1" } ]
 }
