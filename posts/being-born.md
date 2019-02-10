@@ -12,7 +12,7 @@ My mom drove herself to the hospital. My dad was at home with my older sister wh
 
 My empathy partner paused me and said, "as an anesthesiologist myself, I am distracted from empathizing and want to educate, is that okay?" I said sure. Then he said, "you and your mom almost died in childbirth.'
 
-The tears gushed. The flowed. Then they stopped.
+The tears gushed. They flowed. Then they stopped.
 
 Then he said, "your only experience with birth so far has been a near death experience." It sounded far out there and it also sounded true and it felt true. Empathizing with that subconscious fear was liberating and healing. I followed up with my mom about the experience and she said, with no humor, "yes it was very scary. There was a malpractice suit filed against him." I asked why she always tells the story with humor and she said, "I just didn’t want to dwell on it." And she didn’t for thirty years.
 
