@@ -20,7 +20,7 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/runtime": "^7.3.1",
     "chokidar": "^2.0.4",
-    "marked": "^0.6.0",
+    "marked": "^0.7.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.1.6",
