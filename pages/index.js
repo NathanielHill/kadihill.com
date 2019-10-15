@@ -9,7 +9,7 @@ export default () => (
     <h1>Welcome to KadiHill.com</h1>
     <h2>
       Welcome! I want to share everything I've learned about pregnancy, birth and parenting that led me to two ecsatic
-      homebirths and a welath of knowledge from the Guna indians whom we have lived with for over two years.
+      homebirths and a wealth of knowledge from the Guna indians whom we have lived with for over two years.
     </h2>
     <h2>More content coming soon.</h2>
     <style jsx>{`
