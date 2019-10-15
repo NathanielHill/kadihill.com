@@ -1,7 +1,7 @@
 {
   "name": "kadihill",
   "alias": "kadihill.com",
-  "scope": "nata",
+  "scope": "kadihill-zeit-team",
   "version": 2,
   "regions": ["all"],
   "routes": [
