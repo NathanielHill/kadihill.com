@@ -1,8 +1,23 @@
 {
   "name": "kadihill",
   "alias": "kadihill.com",
+  "scope": "nata",
   "version": 2,
   "regions": [ "all" ],
-  "builds": [ { "src": "package.json", "use": "@now/static-build" } ],
-  "routes": [ { "src": "^/(.*)", "dest": "/$1" } ]
-}
+  "routes": [
+    {
+      "src": "^/service-worker.js$",
+      "dest": "/_next/static/service-worker.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
+

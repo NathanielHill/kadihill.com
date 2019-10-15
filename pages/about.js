@@ -1,0 +1,19 @@
+import Head from 'next/head';
+import React from 'react';
+
+export default () => (
+  <>
+    <Head>
+      <title>Kadi Hill | About</title>
+    </Head>
+    <p>
+      I'm Kadi Hill. I'm really into birth, breastfeeding, infant potty training, parenting, co-sleeping, baby wearing,
+      hammocks, community, travel, family, philosophy, empathy, honesty, and connection.
+    </p>
+    <p>
+      I never quite fit in any camp but rather like to travel from community to comunity to take the best from all
+      worlds (I value things from indigenous communities in primitive settings, and also modern science and
+      civilization). I'll keep you on your toes with unexpected opinions and observations.
+    </p>
+  </>
+);
