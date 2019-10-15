@@ -3,7 +3,7 @@
   "alias": "kadihill.com",
   "scope": "nata",
   "version": 2,
-  "regions": [ "all" ],
+  "regions": ["all"],
   "routes": [
     {
       "src": "^/service-worker.js$",
@@ -20,4 +20,4 @@
       "use": "@now/next"
     }
   ]
-
+}
