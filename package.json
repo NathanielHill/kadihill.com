@@ -44,7 +44,8 @@
     "next-offline": "4.0.6",
     "react": "16.10.2",
     "react-dom": "16.10.2",
-    "remark-emoji": "2.0.2"
+    "remark-emoji": "2.0.2",
+    "scrollprogress": "3.0.2"
   },
   "devDependencies": {
     "healthier": "3.2.0",

@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
+import ReadingProgress from 'components/ReadingProgress';
 
 export default ({ title, children }) => (
   <>
     <Head>
       <title>Kadi Hill | {title}</title>
     </Head>
+    <ReadingProgress />
     <h1>{title}</h1>
     <div className='blog-content'>{children}</div>
     <style jsx>{`

@@ -6499,6 +6499,11 @@ schema-utils@^2.0.0, schema-utils@^2.0.1:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
+scrollprogress@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/scrollprogress/-/scrollprogress-3.0.2.tgz#6b36c100b55fe3ef61fd7a17dd52dd6b1e468a81"
+  integrity sha1-azbBALVf4+9h/XoX3VLdax5GioE=
+
 semver-compare@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
