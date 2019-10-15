@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import React from 'react';
 
 export default () => {
@@ -6,24 +7,24 @@ export default () => {
   return (
     <>
       <nav>
-        <a href='.' className={pathname === '/' ? 'kadihill active' : 'kadihill'}>
-          Kadi Hill
-        </a>
+        <Link href='/'>
+          <a className={pathname === '/' ? 'kadihill active' : 'kadihill'}>Kadi Hill</a>
+        </Link>
         <ul>
           <li>
-            <a className={pathname === '/about' ? 'active' : null} href='/about'>
-              About
-            </a>
+            <Link href='/about'>
+              <a className={pathname === '/about' ? 'active' : null}>About</a>
+            </Link>
           </li>
           <li>
-            <a className={pathname.startsWith('/blog') ? 'active' : null} href='/blog'>
-              Blog
-            </a>
+            <Link href='/blog'>
+              <a className={pathname.startsWith('/blog') ? 'active' : null}>Blog</a>
+            </Link>
           </li>
           <li>
-            <a className={pathname === '/contact' ? 'active' : null} href='/contact'>
-              Contact
-            </a>
+            <Link href='/contact'>
+              <a className={pathname === '/contact' ? 'active' : null}>Contact</a>
+            </Link>
           </li>
         </ul>
       </nav>

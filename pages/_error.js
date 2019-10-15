@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import Link from 'next/link';
 
 const Error = () => (
   <>
@@ -9,7 +10,11 @@ const Error = () => (
     <h1>404</h1>
     <p>Looks like there's nothing here!</p>
     <p>
-      Why dont you <a href='/'>start over</a>?
+      Why dont you{' '}
+      <Link href='/'>
+        <a>start over</a>
+      </Link>
+      ?
     </p>
     <style jsx>{`
       h1,
