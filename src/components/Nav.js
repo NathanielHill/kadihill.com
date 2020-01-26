@@ -1,29 +1,29 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import React from 'react';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import React from "react";
 
 export default () => {
   const { pathname } = useRouter();
   return (
     <>
       <nav>
-        <Link href='/'>
-          <a className={pathname === '/' ? 'kadihill active' : 'kadihill'}>Kadi Hill</a>
+        <Link href="/">
+          <a className={pathname === "/" ? "kadihill active" : "kadihill"}>Kadi Hill</a>
         </Link>
         <ul>
           <li>
-            <Link href='/about'>
-              <a className={pathname === '/about' ? 'active' : null}>About</a>
+            <Link href="/about">
+              <a className={pathname === "/about" ? "active" : null}>About</a>
             </Link>
           </li>
           <li>
-            <Link href='/blog'>
-              <a className={pathname.startsWith('/blog') ? 'active' : null}>Blog</a>
+            <Link href="/blog">
+              <a className={pathname.startsWith("/blog") ? "active" : null}>Blog</a>
             </Link>
           </li>
           <li>
-            <Link href='/contact'>
-              <a className={pathname === '/contact' ? 'active' : null}>Contact</a>
+            <Link href="/contact">
+              <a className={pathname === "/contact" ? "active" : null}>Contact</a>
             </Link>
           </li>
         </ul>
@@ -73,7 +73,7 @@ export default () => {
         a:not(.active):hover:after {
           background-color: rgb(134, 134, 134);
           bottom: -2px;
-          content: '';
+          content: "";
           display: block;
           height: 2px;
           position: absolute;
@@ -89,7 +89,7 @@ export default () => {
         .active:after {
           background-color: rgb(160, 214, 180);
           bottom: -2px;
-          content: '';
+          content: "";
           display: block;
           height: 4px;
           position: absolute;

@@ -1,25 +1,25 @@
-const composePlugins = require('next-compose-plugins');
-const emoji = require('remark-emoji');
-const path = require('path');
-const withMDX = require('@next/mdx')({
+const composePlugins = require("next-compose-plugins");
+const emoji = require("remark-emoji");
+const path = require("path");
+const withMDX = require("@next/mdx")({
   options: {
     remarkPlugins: [emoji],
   },
 });
-const withOffline = require('next-offline');
+const withOffline = require("next-offline");
 
 module.exports = composePlugins([withMDX, withOffline], {
-  target: 'serverless',
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
+  target: "serverless",
+  pageExtensions: ["js", "jsx", "md", "mdx"],
+  transformManifest: manifest => ["/"].concat(manifest), // add the homepage to the cache
   workboxOpts: {
-    swDest: 'static/service-worker.js',
+    swDest: "static/service-worker.js",
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: 'NetworkFirst',
+        handler: "NetworkFirst",
         options: {
-          cacheName: 'https-calls',
+          cacheName: "https-calls",
           networkTimeoutSeconds: 15,
           expiration: {
             maxEntries: 150,
@@ -35,18 +35,18 @@ module.exports = composePlugins([withMDX, withOffline], {
   webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      components: path.resolve(__dirname, 'src/components'),
-      images: path.resolve(__dirname, 'src/images'),
+      components: path.resolve(__dirname, "src/components"),
+      images: path.resolve(__dirname, "src/images"),
     };
     config.module.rules.push({
       test: /\.(jpe?g|png|gif|svg|pdf)$/,
       use: [
         {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            publicPath: '/_next/static/',
-            outputPath: 'static/',
-            name: '[name].[hash:6].[ext]',
+            publicPath: "/_next/static/",
+            outputPath: "static/",
+            name: "[name].[hash:6].[ext]",
           },
         },
       ],

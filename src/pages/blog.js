@@ -1,16 +1,16 @@
 /* global preval */
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
 
 const postFileNames = preval`module.exports = require('fs').readdirSync('./pages/blog')` || [];
 
 const posts = postFileNames
   .map(post => {
-    const slug = post.replace(/\.[^/.]+$/, '');
+    const slug = post.replace(/\.[^/.]+$/, "");
     const {
       meta: { postNumber, title, author, pubDate, description },
-    } = require('./blog/' + post);
+    } = require("./blog/" + post);
     return { postNumber, title, author, pubDate, description, slug };
   })
   .sort((a, b) => b.postNumber - a.postNumber);
@@ -29,11 +29,11 @@ export default () => (
               <a>{post.title}</a>
             </Link>
           </h1>
-          <p className='pubDate'>{post.pubDate}</p>
-          <p className='description'>
+          <p className="pubDate">{post.pubDate}</p>
+          <p className="description">
             {post.description}
             <Link href={`blog/${post.slug}`}>
-              <a className='keep-reading'>keep reading &#8594;</a>
+              <a className="keep-reading">keep reading &#8594;</a>
             </Link>
           </p>
         </li>
