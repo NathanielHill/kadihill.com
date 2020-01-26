@@ -35,8 +35,8 @@ module.exports = composePlugins([withMDX, withOffline], {
   webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      components: path.resolve(__dirname, 'components'),
-      images: path.resolve(__dirname, 'images'),
+      components: path.resolve(__dirname, 'src/components'),
+      images: path.resolve(__dirname, 'src/images'),
     };
     config.module.rules.push({
       test: /\.(jpe?g|png|gif|svg|pdf)$/,

@@ -1,17 +1,9 @@
 *
 !*/
 
-!components
-components/*
-!components/**
-
-!images
-images/*
-!images/**
-
-!pages
-pages/*
-!pages/**
+!src
+src/*
+!src/**
 
 !public
 public/*

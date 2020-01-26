@@ -1,7 +1,6 @@
 {
   "name": "kadihill",
   "alias": "kadihill.com",
-  "scope": "kadihill-zeit-team",
   "version": 2,
   "regions": ["all"],
   "routes": [
