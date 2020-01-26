@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-const postFileNames = preval`module.exports = require('fs').readdirSync('./pages/blog')` || [];
+const postFileNames = preval`module.exports = require('fs').readdirSync('./src/pages/blog')` || [];
 
 const posts = postFileNames
   .map(post => {
