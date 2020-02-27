@@ -45,7 +45,7 @@
     "scrollprogress": "3.0.2"
   },
   "devDependencies": {
-    "healthier": "3.2.0",
+    "healthier": "3.3.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.7",
     "prettier": "1.19.1"
