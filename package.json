@@ -7,7 +7,9 @@
   "keywords": [],
   "scripts": {
     "start": "next",
-    "build": "next build"
+    "build": "next build",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -45,12 +47,14 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark-emoji": "2.1.0",
-    "scrollprogress": "3.0.2"
+    "scrollprogress": "3.0.2",
+    "snyk": "^1.324.0"
   },
   "devDependencies": {
     "healthier": "3.3.0",
     "husky": "4.2.5",
     "lint-staged": "10.2.6",
     "prettier": "2.0.5"
-  }
+  },
+  "snyk": true
 }
