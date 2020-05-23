@@ -9,7 +9,8 @@
     "start": "next",
     "build": "next build",
     "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "prepare": "yarn run snyk-protect",
+    "test": "snyk test"
   },
   "husky": {
     "hooks": {
