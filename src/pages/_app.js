@@ -1,8 +1,8 @@
-import App from "next/app";
-import Footer from "components/Footer";
-import Head from "next/head";
-import Nav from "components/Nav";
-import React from "react";
+import App from 'next/app';
+import Footer from 'components/Footer';
+import Head from 'next/head';
+import Nav from 'components/Nav';
+import React from 'react';
 
 export default class extends App {
   render() {
@@ -10,19 +10,19 @@ export default class extends App {
     return (
       <>
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="description" content="Kadi Hill" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-          <meta name="msapplication-square150x150logo" content="/icons/ms-icon-150x150.png" />
-          <meta name="msapplication-square310x310logo" content="/icons/ms-icon-310x310.png" />
-          <meta name="msapplication-square70x70logo" content="/icons/ms-icon-70x70.png" />
-          <meta name="theme-color" content="#fdede7" />
-          <link rel="apple-touch-icon" href="/icons/apple-icon.png" />
-          <link rel="icon" type="image/png" href="/favicon.png" />
-          <link rel="icon" sizes="192x192" href="/icons/icon-192x192.png" />
-          <link rel="manifest" href="/manifest.json" />
-          <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+          <meta name='description' content='Kadi Hill' />
+          <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+          <meta name='msapplication-square150x150logo' content='/icons/ms-icon-150x150.png' />
+          <meta name='msapplication-square310x310logo' content='/icons/ms-icon-310x310.png' />
+          <meta name='msapplication-square70x70logo' content='/icons/ms-icon-70x70.png' />
+          <meta name='theme-color' content='#fdede7' />
+          <link rel='apple-touch-icon' href='/icons/apple-icon.png' />
+          <link rel='icon' type='image/png' href='/favicon.png' />
+          <link rel='icon' sizes='192x192' href='/icons/icon-192x192.png' />
+          <link rel='manifest' href='/manifest.json' />
+          <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' />
           <title>Kadi Hill</title>
         </Head>
         {Component.isErrorPage ? null : <Nav />}
@@ -41,7 +41,7 @@ export default class extends App {
             min-height: 100vh;
             overscroll-behavior: contain;
             font-size: 2vmin;
-            font-family: "Comfortaa", Verdana, Geneva, sans-serif;
+            font-family: 'Comfortaa', Verdana, Geneva, sans-serif;
             overflow-x: hidden;
           }
           body {

@@ -1,6 +1,6 @@
-import Head from "next/head";
-import React from "react";
-import ReadingProgress from "components/ReadingProgress";
+import Head from 'next/head';
+import React from 'react';
+import ReadingProgress from 'components/ReadingProgress';
 
 export default ({ title, children }) => (
   <>
@@ -9,7 +9,7 @@ export default ({ title, children }) => (
     </Head>
     <ReadingProgress />
     <h1>{title}</h1>
-    <div className="blog-content">{children}</div>
+    <div className='blog-content'>{children}</div>
     <style jsx>{`
       h1 {
         font-weight: 800;
