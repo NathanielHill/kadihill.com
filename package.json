@@ -49,7 +49,7 @@
     "react-dom": "16.13.1",
     "remark-emoji": "2.1.0",
     "scrollprogress": "3.0.2",
-    "snyk": "^1.324.0"
+    "snyk": "^1.325.0"
   },
   "devDependencies": {
     "healthier": "3.3.0",
