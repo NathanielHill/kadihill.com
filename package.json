@@ -45,8 +45,8 @@
     "next": "9.4.2",
     "next-compose-plugins": "2.2.0",
     "next-offline": "5.0.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "remark-emoji": "2.1.0",
     "scrollprogress": "3.0.2",
     "snyk": "^1.324.0"
