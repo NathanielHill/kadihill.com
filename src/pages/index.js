@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 
-export default () => (
+const HomePage = () => (
   <>
     <Head>
       <title>Kadi Hill | Home</title>
@@ -26,3 +26,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default HomePage;

@@ -15,7 +15,7 @@ const posts = postFileNames
   })
   .sort((a, b) => b.postNumber - a.postNumber);
 
-export default () => (
+const BlogIndex = () => (
   <>
     <Head>
       <title>Kadi Hill | Blog</title>
@@ -71,3 +71,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default BlogIndex;

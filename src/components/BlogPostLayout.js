@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import ReadingProgress from 'components/ReadingProgress';
 
-export default ({ title, children }) => (
+const BlogPostLayout = ({ title, children }) => (
   <>
     <Head>
       <title>Kadi Hill | {title}</title>
@@ -18,3 +18,5 @@ export default ({ title, children }) => (
     `}</style>
   </>
 );
+
+export default BlogPostLayout;

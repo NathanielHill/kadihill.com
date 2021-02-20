@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () => (
+const Footer = () => (
   <>
     <footer>&copy; 2018 Kadi Hill</footer>
     <style jsx global>{`
@@ -13,3 +13,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default Footer;
