@@ -1,10 +1,10 @@
 import App from 'next/app';
-import type { AppProps, AppContext } from 'next/app'
+import type { AppProps, AppContext } from 'next/app';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Nav from '@/components/Nav';
 
-const KadiHillApp =  ({ Component, pageProps }: AppProps) => (
+const KadiHillApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <meta charSet='utf-8' />
@@ -136,5 +136,4 @@ const KadiHillApp =  ({ Component, pageProps }: AppProps) => (
   </>
 );
 
-
-export default KadiHillApp
+export default KadiHillApp;

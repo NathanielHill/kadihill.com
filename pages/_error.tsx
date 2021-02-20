@@ -38,9 +38,9 @@ const Error = ({ statusCode }) => (
 );
 
 Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 500
-  return { statusCode }
-}
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 500;
+  return { statusCode };
+};
 
 Error.isErrorPage = true;
 
