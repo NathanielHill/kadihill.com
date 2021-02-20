@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-import blogStyles from '@/styles/blog.module.css';
-
 import { getBlogLink, getDateStr, postIsPublished } from '@/lib/blog-helpers';
 import { textBlock } from '@/lib/notion/renderers';
 import getNotionUsers from '@/lib/notion/getNotionUsers';
@@ -50,12 +48,12 @@ const BlogIndexPage = ({ posts = [], preview }) => {
         <title>Kadi Hill | Blog</title>
       </Head>
       {preview && (
-        <div className={blogStyles.previewAlertContainer}>
-          <div className={blogStyles.previewAlert}>
+        <div>
+          <div>
             <b>Note:</b>
             {` `}Viewing in preview mode{' '}
             <Link href={`/api/clear-preview`}>
-              <button className={blogStyles.escapePreview}>Exit Preview</button>
+              <button>Exit Preview</button>
             </Link>
           </div>
         </div>
