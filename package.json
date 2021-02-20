@@ -1,6 +1,6 @@
 {
   "name": "kadihill.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "kadihill.com website",
   "author": "Nathaniel Hill <hello@nathanielhill.io>",
   "license": "UNLICENSED",
@@ -20,9 +20,8 @@
     }
   },
   "lint-staged": {
-    "**/*.js": [
-      "prettier --write",
-      "healthier"
+    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,html,yml,yaml,scss,sass}": [
+      "prettier --write"
     ]
   },
   "prettier": {
@@ -32,33 +31,21 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ],
-    "plugins": [
-      "preval"
-    ]
-  },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.4",
-    "@next/mdx": "^10.0.7",
-    "babel-plugin-preval": "^5.0.0",
+    "@zeit/react-jsx-parser": "^2.0.0",
     "next": "^10.0.7",
-    "next-compose-plugins": "^2.2.0",
-    "next-offline": "^5.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "remark-emoji": "^2.1.0",
     "scrollprogress": "^3.0.2",
-    "snyk": "^1.324.0",
-    "webpack": "^5.23.0"
+    "snyk": "^1.324.0"
   },
   "devDependencies": {
-    "healthier": "^4.0.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
     "husky": "^5.0.9",
     "lint-staged": "^10.2.6",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^4.1.5"
   },
   "snyk": true,
   "volta": {
