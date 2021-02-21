@@ -49,7 +49,7 @@ module.exports = {
     const originalEntry = cfg.entry;
     cfg.entry = async () => {
       const entries = { ...(await originalEntry()) };
-      entries['./scripts/build-rss.js'] = './src/lib/build-rss.ts';
+      entries['./scripts/build-rss'] = './src/lib/build-rss.ts';
       return entries;
     };
     return cfg;

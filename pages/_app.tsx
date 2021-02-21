@@ -1,8 +1,8 @@
-import App from 'next/app';
-import type { AppProps, AppContext } from 'next/app';
-import Footer from '@/components/Footer';
 import Head from 'next/head';
+import type { AppProps } from 'next/app';
+
 import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
 const KadiHillApp = ({ Component, pageProps }: AppProps) => (
   <>
@@ -22,11 +22,11 @@ const KadiHillApp = ({ Component, pageProps }: AppProps) => (
       <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' />
       <title>Kadi Hill</title>
     </Head>
-    {Component.isErrorPage ? null : <Nav />}
+    {Component.name === 'Error' ? null : <Nav />}
     <main>
       <Component {...pageProps} />
     </main>
-    {Component.isErrorPage ? null : <Footer />}
+    {Component.name === 'Error' ? null : <Footer />}
     <style jsx global>{`
       * {
         margin: 0;

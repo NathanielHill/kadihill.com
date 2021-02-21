@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Error404 = () => (
+const Error = () => (
   <>
     <Head>
       <title>Kadi Hill | 404</title>
@@ -37,6 +37,4 @@ const Error404 = () => (
   </>
 );
 
-Error404.isErrorPage = true;
-
-export default Error404;
+export default Error;

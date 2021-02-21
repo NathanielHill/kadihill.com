@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <>
-    <footer>&copy; 2018 Kadi Hill</footer>
+    <footer>&copy; 2018 - 2021 Kadi Hill</footer>
     <style jsx global>{`
       footer {
         font-size: 0.8em;

@@ -42,6 +42,4 @@ Error.getInitialProps = ({ res, err }) => {
   return { statusCode };
 };
 
-Error.isErrorPage = true;
-
 export default Error;
