@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React from 'react';
 
-export default () => (
+const Contact = () => (
   <>
     <Head>
       <title>Kadi Hill | Contact</title>
@@ -21,3 +20,5 @@ export default () => (
     `}</style>
   </>
 );
+
+export default Contact;

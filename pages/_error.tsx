@@ -1,14 +1,13 @@
 import Head from 'next/head';
-import React from 'react';
 import Link from 'next/link';
 
-const Error = () => (
+const Error = ({ statusCode }) => (
   <>
     <Head>
-      <title>Kadi Hill | 404</title>
+      <title>`Kadi Hill | ${statusCode}`</title>
     </Head>
-    <h1>404</h1>
-    <p>Looks like there's nothing here!</p>
+    <h1>{statusCode}</h1>
+    <p>Looks like there's been an error!</p>
     <p>
       Why dont you{' '}
       <Link href='/'>
@@ -38,6 +37,9 @@ const Error = () => (
   </>
 );
 
-Error.isErrorPage = true;
+Error.getInitialProps = ({ res, err }) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 500;
+  return { statusCode };
+};
 
 export default Error;

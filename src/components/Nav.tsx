@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import React from 'react';
 
-export default () => {
+const Nav = () => {
   const { pathname } = useRouter();
   return (
     <>
@@ -102,3 +101,5 @@ export default () => {
     </>
   );
 };
+
+export default Nav;

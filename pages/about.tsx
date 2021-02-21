@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React from 'react';
 
-export default () => (
+const About = () => (
   <>
     <Head>
       <title>Kadi Hill | About</title>
@@ -17,3 +16,5 @@ export default () => (
     </p>
   </>
 );
+
+export default About;
