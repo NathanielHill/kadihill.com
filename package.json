@@ -1,6 +1,5 @@
 {
   "name": "kadihill.com",
-  "version": "2.0.0",
   "description": "kadihill.com website",
   "author": "Nathaniel Hill <hello@nathanielhill.io>",
   "license": "UNLICENSED",
@@ -9,10 +8,7 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect",
-    "test": "snyk test"
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
@@ -38,8 +34,7 @@
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "scrollprogress": "^3.0.2",
-    "snyk": "^1.324.0"
+    "scrollprogress": "^3.0.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
@@ -48,10 +43,5 @@
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
     "typescript": "^4.1.5"
-  },
-  "snyk": true,
-  "volta": {
-    "node": "14.15.5",
-    "yarn": "1.22.10"
   }
 }
