@@ -22,11 +22,11 @@ const KadiHillApp = ({ Component, pageProps }: AppProps) => (
       <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' />
       <title>Kadi Hill</title>
     </Head>
-    {Component.name === 'Error' ? null : <Nav />}
+    <Nav />
     <main>
       <Component {...pageProps} />
     </main>
-    {Component.name === 'Error' ? null : <Footer />}
+    <Footer />
     <style jsx global>{`
       * {
         margin: 0;

@@ -1,47 +1,47 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { getBlogLink, getDateStr, postIsPublished } from '@/lib/blog-helpers';
-import { textBlock } from '@/lib/notion/renderers';
-import getNotionUsers from '@/lib/notion/getNotionUsers';
-import getBlogIndex from '@/lib/notion/getBlogIndex';
-
 export async function getStaticProps({ preview }) {
-  const postsTable = await getBlogIndex();
-
-  const authorsToGet: Set<string> = new Set();
-  const posts: any[] = Object.keys(postsTable)
-    .map((slug) => {
-      const post = postsTable[slug];
-      // remove draft posts in production
-      if (!preview && !postIsPublished(post)) {
-        return null;
-      }
-      post.Authors = post.Authors || [];
-      for (const author of post.Authors) {
-        authorsToGet.add(author);
-      }
-      return post;
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.Date - a.Date);
-
-  const { users } = await getNotionUsers([...authorsToGet]);
-
-  posts.map((post) => {
-    post.Authors = post.Authors.map((id) => users[id].full_name);
-  });
-
   return {
     props: {
       preview: preview || false,
-      posts,
+      posts: [{
+        postNumber: 1,
+        published: true,
+        slug: 'being-born',
+        title: 'Being Born',
+        author: 'Kadi Hill',
+        pubDate: 'October 14th, 2018',
+        tags: [],
+        description:
+          'With my first pregnancy, I had this strange experience where I believed I would have this magical, transcendent birth but also that I would die.',
+      }, {
+        postNumber: 2,
+        published: true,
+        slug: 'learning-to-mother-in-a-bamboo-hut',
+        title: 'Learning to Mother in a Bamboo Hut',
+        author: 'Kadi Hill',
+        pubDate: 'February 4th, 2019',
+        tags: [],
+        description:
+          'To truly understand my birth story, my parenting journey, and where my opinions and views come from you have to understand this part of my journey.',
+      }, {
+        postNumber: 3,
+        published: true,
+        slug: 'giving-birth',
+        title: 'Giving Birth',
+        author: 'Kadi Hill',
+        pubDate: 'February 5th, 2019',
+        tags: [],
+        description:
+          'At 35 weeks pregnant I was sleeping in a camping hammock on a very beautiful, yet very primitive island.',
+      }]
     },
     revalidate: 10,
   };
 }
 
-const BlogIndexPage = ({ posts = [], preview }) => {
+export default function BlogIndexPage({ posts = [], preview }) {
   return (
     <>
       <Head>
@@ -61,16 +61,16 @@ const BlogIndexPage = ({ posts = [], preview }) => {
       <ul>
         {posts.length === 0 && <p>There are no posts yet</p>}
         {posts.map((post) => (
-          <li key={post.Slug}>
+          <li key={post.slug}>
             <h1>
-              <Link href='/blog/[slug]' as={getBlogLink(post.Slug)}>
-                {!post.Published ? <span>Draft</span> : <a>{post.Page}</a>}
+              <Link href='/blog/[slug]' as={`/blog/${post.slug}`}>
+                {!post.published ? <span>Draft</span> : <a>{post.Page}</a>}
               </Link>
             </h1>
-            {post.Date && <p className='pubDate'>{getDateStr(post.Date)}</p>}
+            {post.pubDate && <p className='pubDate'>{post.pubDate}</p>}
             <p className='description'>
-              {(!post.preview || post.preview.length === 0) && 'No preview available'}
-              {(post.preview || []).map((block, idx) => textBlock(block, true, `${post.Slug}${idx}`))}
+              {(!post.description || post.description.length === 0) && 'No preview available'}
+              {post.description ? <p>{post.description}</p> : null}
               <Link href={`blog/${post.slug}`}>
                 <a className='keep-reading'>keep reading &#8594;</a>
               </Link>
@@ -111,5 +111,3 @@ const BlogIndexPage = ({ posts = [], preview }) => {
     </>
   );
 };
-
-export default BlogIndexPage;
