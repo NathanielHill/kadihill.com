@@ -7,7 +7,7 @@ const Error = () => (
       <title>Kadi Hill | 404</title>
     </Head>
     <h1>404</h1>
-    <p>Looks like there's nothing here!</p>
+    <p>Looks like there&apos;s nothing here!</p>
     <p>
       Why dont you{' '}
       <Link href='/'>
