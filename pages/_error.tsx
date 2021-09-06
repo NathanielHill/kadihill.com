@@ -7,7 +7,7 @@ const Error = ({ statusCode }) => (
       <title>`Kadi Hill | ${statusCode}`</title>
     </Head>
     <h1>{statusCode}</h1>
-    <p>Looks like there's been an error!</p>
+    <p>Looks like there&apos;s been an error!</p>
     <p>
       Why dont you{' '}
       <Link href='/'>

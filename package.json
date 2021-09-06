@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "keywords": [],
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

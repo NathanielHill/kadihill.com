@@ -315,21 +315,21 @@ export default function BeingBorn() {
 
             <p>With my first pregnancy, I had these dual thoughts in my mind. I believed I would have this magical, transcendent birth but also that I would die.</p>
 
-            <p>Maybe because someone in my past once "prophesied" I would die during childbirth, maybe because I have had a really close brush with death before. I don’t know. One day I was sharing about this duality at an empathy//Non Violent Communication meetup I have attended for years. We were in pairs taking turns empathizing with one another. I was sharing with a very mild, warm soul. A tall, thin man named Rich who had the same East Texas twang I grew up with. We sat outside in a backyard in Hyde Park, Austin, Texas on a sunny afternoon.</p>
+            <p>Maybe because someone in my past once &quot;prophesied&quot; I would die during childbirth, maybe because I have had a really close brush with death before. I don&apos;t know. One day I was sharing about this duality at an empathy//Non Violent Communication meetup I have attended for years. We were in pairs taking turns empathizing with one another. I was sharing with a very mild, warm soul. A tall, thin man named Rich who had the same East Texas twang I grew up with. We sat outside in a backyard in Hyde Park, Austin, Texas on a sunny afternoon.</p>
 
-            <p>I started sharing about the polarity in my visions of what giving birth would be like and he asked me a question I found surprising, "What was your birth like?" I repeated the story I've heard my whole life. Applying humor in the places it was always applied before:</p>
+            <p>I started sharing about the polarity in my visions of what giving birth would be like and he asked me a question I found surprising, &quot;What was your birth like?&quot; I repeated the story I&apos;ve heard my whole life. Applying humor in the places it was always applied before:</p>
 
             <p>My mom drove herself to the hospital. My dad was at home with my older sister who was 2 years old. My mom had an emergency c - section with my sister. She had a c - section scheduled with me, however she actually went into labor the day of the scheduled surgery which I consider quite lucky for both of us. We still got some of the benefits of natural labor even though I was born via cesarean.</p>
 
             <p>Once the surgery began my mom looked up at my Aunt Becky, her sister, who was in the room with her and told her she could not breathe and she was scared. This part of the story is strangely always told with humor. The anesthesiologist was dancing around and had music playing. Aunt Becky got his attention and he came over to check my mom. Her epidural was reversed, traveling up instead of down.</p>
 
-            <p>My empathy partner paused me and said, "as an anesthesiologist myself, I am distracted from empathizing and want to educate, is that okay?" I said sure. Then he said, "you and your mom almost died in childbirth.'</p>
+            <p>My empathy partner paused me and said, &quot;as an anesthesiologist myself, I am distracted from empathizing and want to educate, is that okay?&quot; I said sure. Then he said, &quot;you and your mom almost died in childbirth.&quot;</p>
 
             <p>The tears gushed. They flowed. Then they stopped.</p>
 
-            <p>Then he said, "your only experience with birth so far has been a near death experience." It sounded far out there and it also sounded true and it felt true.</p>
+            <p>Then he said, &quot;your only experience with birth so far has been a near death experience.&quot; It sounded far out there and it also sounded true and it felt true.</p>
 
-            <p>Empathizing with that subconscious fear was liberating and healing. I followed up with my mom about the experience and she said, with no humor, "yes it was very scary. There was a malpractice suit filed against him." I asked why she always tells the story with humor and she said, "I just didn’t want to dwell on it." And she didn’t for thirty years.</p>
+            <p>Empathizing with that subconscious fear was liberating and healing. I followed up with my mom about the experience and she said, with no humor, &quot;yes it was very scary. There was a malpractice suit filed against him.&quot; I asked why she always tells the story with humor and she said, &quot;I just didn’t want to dwell on it.&quot; And she didn’t for thirty years.</p>
 
             <p>What happened to my mom was bad. You can likely feel that in the tone of the writing. I am so thankful C - sections are available to save lives when they are medically necessary. I am not saying C - sections are bad. My mom was not being cared for properly in this experience. Here are a few things that could have improved the situation:</p>
 
@@ -358,7 +358,7 @@ export default function BeingBorn() {
 
             <p>I asked my mom and dad both to be present at the birth of my first child to help heal their trauma around my birth as well. They flew to another country to attend the birth and were present in the room when my daughter was born at home and it was beautiful and perfect.</p>
 
-            <p>Sharing our stories is important. To process, to share wisdom and lessons learned. One of my favorite things I did to prepare for birth was have anyone who wanted to share their birth stories at my baby showers and blessing ways share them. I heard from four different generations what giving birth was like and the differences were vast. I heard from mom’s who did unmedicated or medicated hospital births, moms who had 'twilight bithrs (meaning they were put to sleep and woke up and handed a baby), moms who birthed at home, and moms who had planned or emergency cesareans.</p>
+            <p>Sharing our stories is important. To process, to share wisdom and lessons learned. One of my favorite things I did to prepare for birth was have anyone who wanted to share their birth stories at my baby showers and blessing ways share them. I heard from four different generations what giving birth was like and the differences were vast. I heard from mom’s who did unmedicated or medicated hospital births, moms who had &apos;twilight births&apos; (meaning they were put to sleep and woke up and handed a baby), moms who birthed at home, and moms who had planned or emergency cesareans.</p>
 
             <p>My take away from all these stories spanning multiple different generations and cultures is that we are each responsible for advocating for and seeking out the birth we want because it can but such a vastly different experience for each woman and baby. Depending on which model of care she is being treated under determines so much of her experience.</p>
 
