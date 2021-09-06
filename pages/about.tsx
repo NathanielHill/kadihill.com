@@ -7,7 +7,7 @@ const About = () => (
     </Head>
     <p>
       I&apos;m Kadi Hill. I&apos;m really into birth, breastfeeding, infant potty training, parenting, co-sleeping, baby wearing,
-      hammocks, community, travel, family, empathy, honesty, connection, Orthodox christianity.
+      hammocks, community, travel, family, empathy, honesty, connection, and Orthodox christianity.
     </p>
     <p>
       I never quite fit in any camp but rather like to travel from community to community to take the best from all
