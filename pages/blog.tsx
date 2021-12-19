@@ -27,6 +27,9 @@ export default function BlogIndexPage({ posts }) {
               {post.date && <p className='pubDate'>{dayjs(post.date).format('MMMM D, YYYY')}</p>}
               <div className='description'>
                 {(!post.excerpt || post.excerpt.length === 0) && 'No preview available'}
+                {/* Should be able to use the default excerpts and fix the styling and
+                    replace the <a> with a proper <Link> by using
+                    https://github.com/remarkablemark/html-react-parser#replace-element-and-children */}
                 <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
                 <Link href='/blog/[slug]' as={post.path}>
                   <a className='keep-reading'>keep reading &#8594;</a>
