@@ -1,39 +1,12 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-export default function BlogIndexPage() {
-  const posts = [{
-    postNumber: 1,
-    published: true,
-    slug: 'being-born',
-    title: 'Being Born',
-    author: 'Kadi Hill',
-    pubDate: 'October 14th, 2018',
-    tags: [],
-    description:
-      'With my first pregnancy, I had this strange experience where I believed I would have this magical, transcendent birth but also that I would die.',
-  }, {
-    postNumber: 2,
-    published: true,
-    slug: 'learning-to-mother-in-a-bamboo-hut',
-    title: 'Learning to Mother in a Bamboo Hut',
-    author: 'Kadi Hill',
-    pubDate: 'February 4th, 2019',
-    tags: [],
-    description:
-      'To truly understand my birth story, my parenting journey, and where my opinions and views come from you have to understand this part of my journey.',
-  }, {
-    postNumber: 3,
-    published: true,
-    slug: 'giving-birth',
-    title: 'Giving Birth',
-    author: 'Kadi Hill',
-    pubDate: 'February 5th, 2019',
-    tags: [],
-    description:
-      'At 35 weeks pregnant I was sleeping in a camping hammock on a very beautiful, yet very primitive island.',
-  }]
+import dayjs from 'dayjs'
 
+import { gql } from "@apollo/client";
+import { getApolloClient } from "lib/apollo-client";
+
+export default function BlogIndexPage({ posts }) {
   return (
     <>
       <Head>
@@ -43,22 +16,22 @@ export default function BlogIndexPage() {
       <ul>
         {posts.length === 0 && <p>There are no posts yet</p>}
         {posts
-          .sort((a, b) => b.postNumber - a.postNumber)
+          .sort((a, b) => dayjs(b).valueOf() - dayjs(a).valueOf())
           .map((post) => (
             <li key={post.slug}>
               <h1>
-                <Link href='/blog/[slug]' as={`/blog/${post.slug}`}>
+                <Link href='/blog/[slug]' as={post.path}>
                   <a>{post.title}</a>
                 </Link>
               </h1>
-              {post.pubDate && <p className='pubDate'>{post.pubDate}</p>}
-              <p className='description'>
-                {(!post.description || post.description.length === 0) && 'No preview available'}
-                {post.description ? <p>{post.description}</p> : null}
-                <Link href={`blog/${post.slug}`}>
+              {post.date && <p className='pubDate'>{dayjs(post.date).format('MMMM D, YYYY')}</p>}
+              <div className='description'>
+                {(!post.excerpt || post.excerpt.length === 0) && 'No preview available'}
+                <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+                <Link href='/blog/[slug]' as={post.path}>
                   <a className='keep-reading'>keep reading &#8594;</a>
                 </Link>
-              </p>
+              </div>
             </li>
           ))}
       </ul>
@@ -95,3 +68,48 @@ export default function BlogIndexPage() {
     </>
   );
 };
+
+
+export async function getStaticProps() {
+  const apolloClient = getApolloClient();
+
+  const data = await apolloClient.query({
+    query: gql`
+      {
+        posts(first: 10000) {
+          edges {
+            node {
+              databaseId
+              slug
+              date
+              modified
+              author {
+                node {
+                  id
+                  name
+                }
+              }
+              title
+              excerpt
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  const posts = data?.data.posts.edges
+    .map(({ node }) => node)
+    .map((post) => {
+      return {
+        ...post,
+        path: `/blog/${post.slug}`,
+      };
+    });
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
