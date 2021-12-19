@@ -19,14 +19,13 @@ const KadiHillApp = ({ Component, pageProps }: AppProps) => (
       <link rel='icon' type='image/png' href='/favicon.png' />
       <link rel='icon' sizes='192x192' href='/icons/icon-192x192.png' />
       <link rel='manifest' href='/manifest.json' />
-      <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' />
       <title>Kadi Hill</title>
     </Head>
-    {Component.name === 'Error' ? null : <Nav />}
+    <Nav />
     <main>
       <Component {...pageProps} />
     </main>
-    {Component.name === 'Error' ? null : <Footer />}
+    <Footer />
     <style jsx global>{`
       * {
         margin: 0;
