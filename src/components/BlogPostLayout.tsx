@@ -7,6 +7,7 @@ export default function BlogPostLayout({ title, children }) {
         <>
             <Head>
                 <title>Kadi Hill | {title}</title>
+                {/* <meta name="description" content={`Read more about ${post.title} on ${site.title}`} /> */}
             </Head>
             <ReadingProgress />
             <h1>{title}</h1>
