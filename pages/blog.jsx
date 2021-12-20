@@ -1,18 +1,27 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
+import parse, { domToReact } from 'html-react-parser';
 
-import { gql } from "@apollo/client";
-import { getApolloClient } from "lib/apollo-client";
+import { gql } from '@apollo/client';
+import { getApolloClient } from 'lib/apollo-client';
 
 export default function BlogIndexPage({ posts }) {
+  function renderCleanExcerpt(post) {
+    if (!post.excerpt || post.excerpt.length === 0) {
+      return <p>No preview available</p>;
+    }
+    return parse(post.excerpt, {
+      replace: ({ attribs }) => attribs && attribs.class === 'more-link' && <>{domToReact({})}</>,
+    });
+  }
+
   return (
     <>
       <Head>
         <title>Kadi Hill | Blog</title>
       </Head>
-
       <ul>
         {posts.length === 0 && <p>There are no posts yet</p>}
         {posts
@@ -26,23 +35,26 @@ export default function BlogIndexPage({ posts }) {
               </h1>
               {post.date && <p className='pubDate'>{dayjs(post.date).format('MMMM D, YYYY')}</p>}
               <div className='description'>
-                {(!post.excerpt || post.excerpt.length === 0) && 'No preview available'}
-                {/* Should be able to use the default excerpts and fix the styling and
-                    replace the <a> with a proper <Link> by using
-                    https://github.com/remarkablemark/html-react-parser#replace-element-and-children */}
-                <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                <Link href='/blog/[slug]' as={post.path}>
-                  <a className='keep-reading'>keep reading &#8594;</a>
-                </Link>
+                {renderCleanExcerpt(post)}
+                <div className='keep-reading-container'>
+                  <Link href='/blog/[slug]' as={post.path}>
+                    <a className='keep-reading'>keep reading &#8594;</a>
+                  </Link>
+                </div>
               </div>
             </li>
           ))}
       </ul>
       <style jsx>{`
+        .keep-reading-container {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: -0.2em;
+        }
         .keep-reading {
           font-size: 0.75em;
           display: block;
-          text-indent: 0;
+          padding-right: 0.75em;
         }
         ul {
           margin: 0 0 1em 0;
@@ -70,8 +82,7 @@ export default function BlogIndexPage({ posts }) {
       `}</style>
     </>
   );
-};
-
+}
 
 export async function getStaticProps() {
   const apolloClient = getApolloClient();
